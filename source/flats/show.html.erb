@@ -1,0 +1,33 @@
+<% flat = data.flats[owner] %>
+<div class="container">
+	<div class="row">
+	<div class="col-sm-7 col-xs-12 col-sm-offset-1">
+		<div class = "owner-details">
+			<%= image_tag flat.owner_picture, class: "avatar-large" %>
+			<p><%= flat.owner_name %></p>
+		</div>
+
+		<div class="flat-description">
+			<h1><%= flat.description %></h1>
+			<p><%= flat.city %></p>
+		</div>
+	</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="booking-box">
+			<h3>Book this flat</h3>
+				    <form action="#" class="form-">
+				    <div class="checkin">
+			          <input type="text" class="form-control input-sm check" placeholder="checkin">
+			          <input type="text" class="form-control input-sm check" placeholder="checkout">
+				    </div>
+			          <select name="" id="guests" class="form-control">
+			            <option value="1">1 guest</option>
+			            <option value="2">2 guests</option>
+			            <option value="3">3 guests</option>
+			          </select>
+			          <input type="submit" class="btn btn-book" value="Book it">
+			        </form>
+			</div>
+		</div>
+	</div>
+</div>	

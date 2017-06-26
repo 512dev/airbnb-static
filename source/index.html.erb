@@ -43,22 +43,22 @@
         <h2 class="text-center">Your next trip</h2>
 
         <div class="row">
-          <% data.flats.each do |flat| %>
-		  	<% link_to "#" do %>
+          <% data.flats.each do |owner, flat| %>
+		    <% link_to "flats/#{owner}.html" do %>
 		      <div class="col-xs-12 col-sm-4">
-		        <div class="card" 
-		        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/<%= flat.image %>');">
+		        <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), 
+		        url('<%= image_path flat.image %>');">
 
-		          <div class="card-category"><%= flat.category %></div>
+		          <div class="card-category"><%= flat.city %></div>
 		          <div class="card-description">
-		            <h2><%= flat.title %></h2>
-		            <p><%= flat.description %></p>
+		            <h2><%= flat.name %></h2>
+		            <p><%= flat.summary %></p>
 		          </div>
-		          <%= image_tag "#{flat.avatar}", class: "card-user avatar" %>
+		          <%= image_tag "#{flat.owner_picture}", class: "card-user avatar" %>
 		          
 		        </div>
 		      </div>
-	      <% end %>
+		 	<% end %>
 		 <% end %>
         </div>
       </div>

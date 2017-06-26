@@ -1,0 +1,18 @@
+.booking-box{
+	background-color: $grey;
+	h3{
+		padding: 8px 10px;
+	}
+}
+#guests{
+	margin: 0 auto;
+}
+.checkin{
+	display: flex;
+	justify-content: space-around;
+	margin: 10px;
+}
+.btn-book{
+	background-color: $brand-color;
+	color: white;
+}
