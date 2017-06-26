@@ -41,7 +41,7 @@
     <div class="wrapper-grey padded">
       <div class="container">
         <h2 class="text-center">Your next trip</h2>
-        
+
         <div class="row">
           <% data.flats.each do |flat| %>
 		  	<% link_to "#" do %>
@@ -54,7 +54,8 @@
 		            <h2><%= flat.title %></h2>
 		            <p><%= flat.description %></p>
 		          </div>
-		          <img class="card-user avatar avatar-large" src="images/<%= flat.avatar %>">
+		          <%= image_tag "#{flat.avatar}", class: "card-user avatar" %>
+		          
 		        </div>
 		      </div>
 	      <% end %>
